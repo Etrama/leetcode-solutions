@@ -3,5 +3,4 @@ class Solution:
         result_dict = {}
         for word in s.split():
             result_dict[int(word[-1])] = word[:-1]
-        result_dict = dict(sorted(result_dict.items()))
-        return " ".join(result_dict.values())
+        return " ".join(result_dict[j] for j in sorted(result_dict))
