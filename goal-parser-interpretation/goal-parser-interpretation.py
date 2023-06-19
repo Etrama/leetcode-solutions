@@ -1,6 +1,7 @@
 class Solution:
     def interpret(self, command: str) -> str:
         result = ""
+        reference = {"G": "G", "()":"o", "(al)":"al"}
         for i in range(0, len(command)):
             if command[i] == "G":
                 result += "G"
