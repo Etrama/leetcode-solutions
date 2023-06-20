@@ -4,7 +4,9 @@ class Solution:
         old_index = 0
         for char in word:
             new_index = keyboard.index(char)
-            difference = abs(new_index - old_index)
+            difference = new_index - old_index
+            if difference < 0:
+                difference = -1*difference
             result += difference
             old_index = new_index
         return result 
