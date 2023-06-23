@@ -18,8 +18,8 @@ class Solution:
                 p_index = index
             if "M" in val:
                 m_index = index
-        print(g_index)
-        print(p_index)
-        print(m_index)
+        # print(g_index)
+        # print(p_index)
+        # print(m_index)
         cost += sum(travel[:g_index]) + sum(travel[:p_index]) + sum(travel[:m_index])
         return cost
