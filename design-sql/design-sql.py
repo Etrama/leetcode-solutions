@@ -13,9 +13,7 @@ class SQL:
 
     def deleteRow(self, name: str, rowId: int) -> None:
         #250 calls
-        # del self.tables_dict[name][rowId]
-        # we probably don't need to do anything in delete row lol
-        pass
+        del self.tables_dict[name][rowId]
 
     def selectCell(self, name: str, rowId: int, columnId: int) -> str:
         #10^4 calls
