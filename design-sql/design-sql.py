@@ -4,8 +4,9 @@ class SQL:
         self.tables_dict = {}
         self.tables_dict = {name:{0:"beginning"} for name in names}
         self.last_insert = {name:0 for name in names}
-        print(self.tables_dict)
-        print(self.last_insert)
+        # print(self.tables_dict)
+        # print(self.last_insert)
+        
     def insertRow(self, name: str, row: List[str]) -> None:
         #250 calls
         self.last_insert[name] = self.last_insert[name] + 1
