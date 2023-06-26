@@ -11,7 +11,9 @@ class Solution:
             if node:
                 if low <= node.val <= high:
                     self.summation += node.val
-                dfs(node.left)
-                dfs(node.right)
+                if low < node.val:
+                    dfs(node.left)
+                if high > node.val:
+                    dfs(node.right)
         dfs(root)
         return self.summation
