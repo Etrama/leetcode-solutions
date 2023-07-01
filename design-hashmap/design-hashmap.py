@@ -12,9 +12,10 @@ class MyHashMap:
                     self.map[index] = [key, value]
                     
     def get(self, key: int) -> int:
-        for x, y in self.map:
-            if x == key:
-                return y
+        if len(self.map) != 0:
+            for x, y in self.map:
+                if x == key:
+                    return y
         return -1
         
     def remove(self, key: int) -> None:
