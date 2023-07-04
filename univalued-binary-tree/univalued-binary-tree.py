@@ -16,5 +16,5 @@ class Solution:
                 dfs(node.right)
         dfs(root)
         value_set.remove(None)
-        print(value_set)
+        # print(value_set)
         return len(value_set) == 1
