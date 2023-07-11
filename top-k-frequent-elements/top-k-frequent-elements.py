@@ -2,7 +2,7 @@ import collections
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         count_dict = collections.Counter(nums)
-        print(count_dict)
+        # print(count_dict)
         # print(sorted(count_dict, key=count_dict.get, reverse=True))
         return list(sorted(count_dict, key=count_dict.get, reverse=True))[:k]
         
