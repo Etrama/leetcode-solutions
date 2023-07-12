@@ -8,8 +8,8 @@ class Solution:
         while k >= 1:
             right_products.insert(0, right_products[0]*nums[k])
             k -= 1
-        # print(left_products)
-        # print(right_products)
+        print(left_products)
+        print(right_products)
         answer = []
         for j in range(len(nums)):
             answer.append(left_products[j]*right_products[j])
