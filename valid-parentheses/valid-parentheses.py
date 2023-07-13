@@ -1,14 +1,18 @@
 class Solution:
     def isValid(self, s: str) -> bool:
+        open_close_map = {"(":")",
+                        "[":"]",
+                        "{":"}"}
+        open_set = {"(","{","["}
         stack = []
-        ref_dict = {"}":"{", "]":"[", ")":"("}
-        for bracket in s:
-            if bracket in ["(", "[", "{"]:
-                stack.append(bracket)
-            else:
-                if len(stack)!=0 and ref_dict[bracket] == stack[-1]:
-                    stack.pop(-1)
-                    continue
+        for i in s:
+                if i in open_close_map.keys():
+                    stack.append(i)
+                elif i in open_close_map.values() and len(stack) > 0:
+                    if i == open_close_map[stack[-1]]:
+                        stack.pop()
+                    else:
+                        return False
                 else:
                     return False
         return len(stack) == 0
