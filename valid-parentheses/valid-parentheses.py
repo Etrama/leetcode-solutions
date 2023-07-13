@@ -3,7 +3,7 @@ class Solution:
         open_close_map = {"(":")",
                         "[":"]",
                         "{":"}"}
-        # open_set = {"(","{","["}
+        open_set = {"(","{","["}
         stack = []
         for i in s:
                 if i in open_close_map.keys():
